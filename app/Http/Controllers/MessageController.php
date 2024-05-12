@@ -48,6 +48,12 @@ class MessageController extends Controller
 
     public function store(Request $request)
     {
+        // Je moet dus nog bij index ervoor zorgen dat je alle "role" info terug geeft
+        // Je laat alle "role" namen zien in een dropdown. 
+        // Wanneer je role hebt gekozen zorg je ervoor dat alleen zij een notificatie krijgen
+        
+        // Je moet waarschijnlijk hieronder een foreach plaatsen omdat je meerdere ID's gaat hebben.
+
         $request->validate([
             'title' => 'required|string|max:255',
             'message' => 'required|string',
